@@ -1,9 +1,9 @@
 <ul>
   <li
-    [class.highlight]="video.id === selectedVideo?.id"
-    *ngFor="let video of videoList"
-    (click)="setSelectedVideo(video)"
+    [class.highlight]="videoData.id === selectedVideo?.id"
+    *ngFor="let videoData of videoList"
+    (click)="setSelectedVideo(videoData)"
   >
-    {{ video.author }} - {{ video.title }}
+    <app-video-thumbnail [video]="videoData"></app-video-thumbnail>
   </li>
 </ul>
