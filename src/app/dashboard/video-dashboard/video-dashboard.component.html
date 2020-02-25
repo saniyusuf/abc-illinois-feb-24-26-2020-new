@@ -2,7 +2,7 @@
 
 <app-video-list
   (videoSelected)="onVideoSelected($event)"
-  [videoList]="videoListData"
+  [videoList]="videoListData | async"
 ></app-video-list>
 
 <app-video-player [video]="currentlySelectedVideo"></app-video-player>
