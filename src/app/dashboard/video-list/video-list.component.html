@@ -1,1 +1,9 @@
-<p>video-list works!</p>
+<ul>
+  <li
+    [class.highlight]="video.id === selectedVideo?.id"
+    *ngFor="let video of videoList"
+    (click)="setSelectedVideo(video)"
+  >
+    {{ video.author }} - {{ video.title }}
+  </li>
+</ul>
